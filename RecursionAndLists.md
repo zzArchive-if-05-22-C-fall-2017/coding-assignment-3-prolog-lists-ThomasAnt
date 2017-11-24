@@ -27,6 +27,8 @@ ancestor(X, Z) :- parent(X, Z).
 ancestor(X, Z) :- parent(X, Y), ancestor(Y, Z).
 ```
 
+PROLOG now allows to query for all ancestors of a given name. If we try, e.g., `ancestor(X, jacob)` PROLOG answers with the first ancestor it finds (`X = pat ?`). At the prompt after the question mark we can enter a semicolon to get the next possible answer to our query. This would be `X = carol ?`, and so forth. If there is no more answer available PROLOG answers with `no`. There is also a way to get all possible answers at one time by typing the caracter `a` at the prompt.
+
 ### Lists
 #### Basics
 A list in PROLOG is started and ended by typing square brackets ([a, b, c]), very similar to lists in JavaScript. Contrary to JavaScript there is no access via indices available in PROLOG, which would not make very much sense consicering the absence of an iterator statement like `for` or `while`.
@@ -71,7 +73,15 @@ In PROLOG this looks like
 ```
 concatenate([], L, L).
 concatenate([H|T], L, [H|ExtendedTail]) :- concatenate(T, L, ExtendedTail).
-
+```
+To demonstrate the power of prolog clauses we use now the clause `concatenate/3` to get the days before and after a specific day in the week. To do so enter the following query into the system
+```
+concatenate(Before, [wed | After], [mon, tue, wed, thu, fri]).
+```
+and one will get the answer
+```
+After = [thu,fri]
+Before = [mon,tue]
 ```
 
 Experiment with the given knowledge base to get familiar with the whole system.
