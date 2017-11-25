@@ -9,8 +9,8 @@ The goal of this assignment is to train recursion and lists in PROLOG.
 
 ## Required Tasks
 1. Implement a clause `prepend/3` which adds an element `E` in front of a list `L`.
-2. Implement a clause `append/3` which adds an element `E` at the end of a list `L`.
-2. Implement a clause `length/2` which calculates the length of a list.
+2. Implement a clause `addElement/3` which adds an element `E` at the end of a list `L`.
+2. Implement a clause `hasLength/2` which calculates the length of a list.
 3. Implement a clause `remove/3` which removes an element `E` from a list `L`.
 
 ## Hints
