@@ -14,7 +14,7 @@ The goal of this assignment is to train recursion and lists in PROLOG.
 3. Implement a clause `remove/3` which removes an element `E` from a list `L`.
 
 ## Hints
-- `addElement/3` works very similar to `concatenate/2` as given in the tutorial [RecursionAndLists](RecursionAndLists.md).
+- `addElement/3` works very similar to `concatenate/3` as given in the tutorial [RecursionAndLists](RecursionAndLists.md).
 - One can think about `remove/3` as we thought about `isMember` in the [tutorial](RecursionAndLists.md):
    - If `E` is the head of `L` then the result is the tail of `L`.
    - If `E` is in the tail of `L` we must remove `E` from the tail of `L`.
